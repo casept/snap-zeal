@@ -50,3 +50,11 @@ parts:
     plugin: copy
     files:
       qt5-launch: bin/qt5-launch
+
+  integration:
+    plugin: nil
+    stage-packages:
+      - ttf-ubuntu-font-family
+    snap:
+      - usr/share
+      - -usr/share/doc
