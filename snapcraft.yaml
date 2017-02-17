@@ -4,7 +4,7 @@ summary: Zeal is a simple offline documentation browser inspired by Dash.
 description: |
         Zeal is a simple offline documentation browser inspired by Dash. This is an unofficial build.
 
-grade: devel
+grade: stable 
 confinement: strict
 apps:
   zeal:
