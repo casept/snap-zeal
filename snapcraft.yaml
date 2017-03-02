@@ -9,7 +9,7 @@ confinement: strict
 apps:
   zeal:
     command: desktop-launch $SNAP/usr/bin/zeal
-    plugs: [network, x11, browser-support]
+    plugs: [network, x11, unity7, browser-support]
 parts:
 
   zeal:
