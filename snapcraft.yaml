@@ -8,23 +8,9 @@ grade: stable
 confinement: strict
 apps:
   zeal:
-    command: qt5-launch usr/bin/zeal
+    command: desktop-launch $SNAP/usr/bin/zeal
     plugs: [network, x11, browser-support]
 parts:
-  qt:
-    plugin: nil
-    stage-packages:
-      - libqt5concurrent5
-      - libqt5core5a
-      - libqt5dbus5
-      - libqt5gui5
-      - libqt5network5
-      - libqt5svg5
-      - libqt5widgets5
-      - libqt5x11extras5
-      - libqt5xml5
-      - libqt5webkit5
-      - libqt5sql5-sqlite
 
   zeal:
     plugin: qmake
@@ -40,21 +26,8 @@ parts:
       - libxslt1-dev
       - libqt5x11extras5-dev
       - libqt5webkit5-dev
-#      - libqt5webenginewidgets5
     stage-packages:
       - xcb
       - libxcb-cursor0
-    after: [qt]
-
-  launcher:
-    plugin: copy
-    files:
-      qt5-launch: bin/qt5-launch
-
-  integration:
-    plugin: nil
-    stage-packages:
-      - ttf-ubuntu-font-family
-    snap:
-      - usr/share
-      - -usr/share/doc
+      - libqt5sql5-sqlite
+    after: [desktop-qt5]
