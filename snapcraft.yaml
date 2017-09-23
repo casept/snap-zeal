@@ -1,5 +1,5 @@
 name: zeal-casept # you probably want to 'snapcraft register <name>'
-version: '0.3.1' # just for humans, typically '1.2+git' or '1.3.2'
+version: '0.4.0' # just for humans, typically '1.2+git' or '1.3.2'
 summary: Zeal is a simple offline documentation browser inspired by Dash.
 description: |
         Zeal is a simple offline documentation browser inspired by Dash. This is an unofficial build.
@@ -14,8 +14,8 @@ parts:
 
   zeal:
     plugin: qmake
-    qt-version: qt5
-    source: https://github.com/zealdocs/zeal/archive/v0.3.1.tar.gz
+    qt-version: "qt5"
+    source: https://github.com/zealdocs/zeal/archive/v0.4.0.tar.gz
     build-packages:
       - build-essential
       - libarchive-dev
@@ -28,6 +28,7 @@ parts:
       - libqt5webkit5-dev
     stage-packages:
       - xcb
+      - libarchive13
       - libxcb-cursor0
       - libqt5sql5-sqlite
     after: [desktop-qt5]
