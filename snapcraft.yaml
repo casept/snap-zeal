@@ -26,6 +26,7 @@ parts:
       - libxslt1-dev
       - libqt5x11extras5-dev
       - libqt5webkit5-dev
+      - libsqlite3-dev
     stage-packages:
       - xcb
       - libarchive13
